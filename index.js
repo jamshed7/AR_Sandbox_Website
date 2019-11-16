@@ -4,13 +4,11 @@ var calibrateSfx = new Audio('sounds/calibrate.mp3');
 
 document.querySelector('.start').addEventListener("click", function(){
   startSfx.play();
-  //alert("Start button was clicked!");
   buttonAnimation(".start");
   buttonAnimation(".stop");
 });
 
 document.querySelector('.stop').addEventListener("click", function(){
-  alert("Stop button was clicked!");
   buttonAnimation(".stop");
   buttonAnimation(".start");
 
@@ -18,8 +16,9 @@ document.querySelector('.stop').addEventListener("click", function(){
 
 document.querySelector('.calibrate').addEventListener("click", function(){
   calibrateSfx.play();
-  //alert("Calibrate button was clicked!");
+  alert("Calibration has started, please be patient as this might take some time! Thank you! :)");
   buttonAnimation(".calibrate");
+  setTimeout(function(){ buttonAnimation(".calibrate"); }, 8000);
 });
 
 function buttonAnimation(buttonName) {
