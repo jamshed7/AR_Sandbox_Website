@@ -7,7 +7,8 @@ var calibrateSfx = new Audio('sounds/calibrate.mp3');
 const socket = new WebSocket("ws://localhost:8080");
 
 socket.onopen = function(event) {
-  console.log(event);
+  console.log(event.data);
+  //var engineData = JSON.parse(event.data);
 };
 
 
