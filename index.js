@@ -6,6 +6,11 @@ var calibrateSfx = new Audio('sounds/calibrate.mp3');
 // WebSocket connection
 const socket = new WebSocket("ws://localhost:8080");
 
+socket.onopen = function(event) {
+  console.log(event);
+};
+
+
 document.querySelector('.start').addEventListener("click", function(){
   startSfx.play();
   buttonAnimation(".start");
