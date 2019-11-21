@@ -27,9 +27,9 @@ document.querySelector('.stop').addEventListener("click", function(){
 
 document.querySelector('.calibrate').addEventListener("click", function(){
   calibrateSfx.play();
-  alert("Calibration has started, please be patient as this might take some time! Thank you! :)");
   buttonAnimation(".calibrate");
   socket.send("calibrate");
+  alert("Calibration has started, please be patient as this might take some time! Thank you! :)");
   setTimeout(function(){ buttonAnimation(".calibrate"); }, 8000);
 });
 
